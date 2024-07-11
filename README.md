@@ -1,0 +1,1 @@
+# fasthtml-htmx-crash
