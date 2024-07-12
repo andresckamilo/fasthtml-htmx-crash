@@ -13,9 +13,6 @@ app.mount("/public", StaticFiles(directory="../public"), name="static")
 
 rt: app.route = app.route
 
-current_temperature: int = 20
-
-
 @dataclass
 class Contact:
     name: str
