@@ -9,7 +9,7 @@ from dataclasses import dataclass
 import httpx
 
 app: FastHTML = FastHTMLWithLiveReload(
-    hdrs=(Script(src="https://cdn.tailwindcss.com"),)
+    hdrs=(Script(src="https://cdn.tailwindcss.com"), )
 )
 
 app.mount("/public", StaticFiles(directory="public"), name="public")
@@ -28,7 +28,7 @@ rt: app.route = app.route
 
 @rt("/", methods=["GET"])
 async def get():
-    return Body(
+    return Title("Users"),Body(
         Div(
             H1("Simple request example", cls="text-2xl font-bold my-5"),
             Button(
